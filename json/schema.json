@@ -1,0 +1,157 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "EUDR Exchange Format, defined by Initiative Online Print e.V.",
+    "type": "object",
+    "properties": {
+        "operator": {
+            "type": "object",
+            "properties": {
+                "company_name": {
+                    "type": "string"
+                },
+                "address": {
+                    "type": "object",
+                    "properties": {
+                        "street": {
+                            "type": "string"
+                        },
+                        "postal_code": {
+                            "type": "string"
+                        },
+                        "city": {
+                            "type": "string"
+                        },
+                        "country": {
+                            "type": "string",
+                            "minLength": 2,
+                            "maxLength": 2
+                        }
+                    },
+                    "required": [
+                        "street",
+                        "postal_code",
+                        "city",
+                        "country"
+                    ]
+                },
+                "contact_person": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "email": {
+                            "type": "string",
+                            "format": "email"
+                        },
+                        "phone": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "name",
+                        "email",
+                        "phone"
+                    ]
+                },
+                "eudr_details": {
+                    "type": "object",
+                    "properties": {
+                        "eudr_role": {
+                            "type": "string",
+                            "enum": [
+                                "SME-Operator",
+                                "SME-Trader",
+                                "LC-Operator",
+                                "LC-Trader"
+                            ]
+                        },
+                        "eudr_dds_responsibility": {
+                            "type": "string",
+                            "enum": [
+                                "own",
+                                "supplier"
+                            ]
+                        },
+                        "eudr_document_type": {
+                            "type": "string",
+                            "enum": [
+                                "DownstreamReference",
+                                "FirstPlacerReference"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "eudr_role",
+                        "eudr_dds_responsibility",
+                        "eudr_document_type"
+                    ]
+                }
+            },
+            "required": [
+                "company_name",
+                "address",
+                "contact_person",
+                "eudr_details"
+            ]
+        },
+        "order_item": {
+            "type": "object",
+            "properties": {
+                "order_reference": {
+                    "type": "string"
+                },
+                "item_reference": {
+                    "type": "string"
+                },
+                "production_reference": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "order_reference",
+                "item_reference"
+            ]
+        },
+        "referenced_eudr_statements": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "reference_number": {
+                        "type": "string"
+                    },
+                    "verification_number": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "reference_number",
+                    "verification_number"
+                ]
+            },
+            "minItems": 1
+        },
+        "document_meta": {
+            "type": "object",
+            "properties": {
+                "identifier": {
+                    "type": "string"
+                },
+                "submission_date": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+            "required": [
+                "submission_date"
+            ]
+        }
+    },
+    "required": [
+        "operator",
+        "order_item",
+        "referenced_eudr_statements",
+        "document_meta"
+    ]
+}

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="eudr">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="operator" type="OperatorType"/>
+                <xs:element name="order_item" type="OrderItemType"/>
+                <xs:element name="referenced_eudr_statements" type="ReferencedEudrStatementsType"/>
+                <xs:element name="document_meta" type="DocumentMetaType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Operator -->
+    <xs:complexType name="OperatorType">
+        <xs:sequence>
+            <xs:element name="company_name" type="xs:string"/>
+            <xs:element name="address" type="AddressType"/>
+            <xs:element name="contact_person" type="ContactPersonType"/>
+            <xs:element name="eudr_details" type="EudrDetailsType"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="AddressType">
+        <xs:sequence>
+            <xs:element name="street" type="xs:string"/>
+            <xs:element name="postal_code" type="xs:string"/>
+            <xs:element name="city" type="xs:string"/>
+            <xs:element name="country" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ContactPersonType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="email" type="xs:string"/>
+            <xs:element name="phone" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="EudrDetailsType">
+        <xs:sequence>
+            <xs:element name="eudr_role">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="SME-Operator"/>
+                        <xs:enumeration value="SME-Trader"/>
+                        <xs:enumeration value="LC-Operator"/>
+                        <xs:enumeration value="LC-Trader"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="eudr_dds_responsibility">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="own"/>
+                        <xs:enumeration value="supplier"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="eudr_document_type">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="DownstreamReference"/>
+                        <xs:enumeration value="FirstPlacerReference"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Order Item -->
+    <xs:complexType name="OrderItemType">
+        <xs:sequence>
+            <xs:element name="order_reference" type="xs:string"/>
+            <xs:element name="item_reference" type="xs:string"/>
+            <xs:element name="production_reference" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Referenced EUDR Statements -->
+    <xs:complexType name="ReferencedEudrStatementsType">
+        <xs:sequence>
+            <xs:element name="statement" type="StatementType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="StatementType">
+        <xs:sequence>
+            <xs:element name="reference_number" type="xs:string"/>
+            <xs:element name="verification_number" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Document Meta -->
+    <xs:complexType name="DocumentMetaType">
+        <xs:sequence>
+            <xs:element name="identifier" type="xs:string" minOccurs="0"/>
+            <xs:element name="submission_date" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

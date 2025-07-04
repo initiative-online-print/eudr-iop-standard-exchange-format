@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT eudr (operator, order_item, referenced_eudr_statements, document_meta)>
+
+<!ELEMENT operator (company_name, address, contact_person, eudr_details)>
+<!ELEMENT company_name (#PCDATA)>
+<!ELEMENT address (street, postal_code, city, country)>
+<!ELEMENT street (#PCDATA)>
+<!ELEMENT postal_code (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT contact_person (name, email, phone)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+<!ELEMENT eudr_details (eudr_role, eudr_dds_responsibility, eudr_document_type)>
+<!ELEMENT eudr_role (#PCDATA)>
+<!ELEMENT eudr_dds_responsibility (#PCDATA)>
+<!ELEMENT eudr_document_type (#PCDATA)>
+
+<!ELEMENT order_item (order_reference, item_reference, production_reference?)>
+<!ELEMENT order_reference (#PCDATA)>
+<!ELEMENT item_reference (#PCDATA)>
+<!ELEMENT production_reference (#PCDATA)>
+
+<!ELEMENT referenced_eudr_statements (statement+)>
+<!ELEMENT statement (reference_number, verification_number)>
+<!ELEMENT reference_number (#PCDATA)>
+<!ELEMENT verification_number (#PCDATA)>
+
+<!ELEMENT document_meta (identifier?, submission_date)>
+<!ELEMENT identifier (#PCDATA)>
+<!ELEMENT submission_date (#PCDATA)>

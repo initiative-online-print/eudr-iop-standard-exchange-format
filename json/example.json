@@ -1,0 +1,45 @@
+{
+    "$schema": "./schema.json",
+    "operator": {
+        "company_name": "Print GmbH",
+        "address": {
+            "street": "Am Buchenhain 4",
+            "postal_code": "45239",
+            "city": "Essen",
+            "country": "DE"
+        },
+        "contact_person": {
+            "name": "Jane Doe",
+            "email": "jane.doe@example.org",
+            "phone": "+49 1234 567-890"
+        },
+        "eudr_details": {
+            "eudr_role": "SME-Operator",
+            "eudr_dds_responsibility": "supplier",
+            "eudr_document_type": "DownstreamReference"
+        }
+    },
+    "order_item": {
+        "order_reference": "123456",
+        "item_reference": "1",
+        "production_reference": "ABC_123456_1"
+    },
+    "referenced_eudr_statements": [
+        {
+            "reference_number": "24FRXVV3VOS885",
+            "verification_number": "Pr0p8555Q-q5573B321"
+        },
+        {
+            "reference_number": "24FRYHH3VOS886",
+            "verification_number": "Pr0p8555Q-z4583B322"
+        },
+        {
+            "reference_number": "24FRZJJ3VOS887",
+            "verification_number": "Pr0p8555Q-q9593B323"
+        }
+    ],
+    "document_meta": {
+        "identifier": "12345abc-67de-89f0-ghi1-j23456k7890m",
+        "submission_date": "2025-07-03T11:15:00.000Z"
+    }
+}

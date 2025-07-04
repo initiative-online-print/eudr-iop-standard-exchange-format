@@ -1,0 +1,12 @@
+* text=auto eol=lf
+
+*.json text diff=json
+*.md text diff=markdown
+*.xml text diff=xml
+
+# Ignore for export
+/.git export-ignore
+/.idea export-ignore
+
+/.editorconfig export-ignore
+/.gitattributes export-ignore

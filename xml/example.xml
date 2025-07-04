@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eudr xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="schema.xsd">
+    <operator>
+        <company_name>Print GmbH</company_name>
+        <address>
+            <street>Am Buchenhain 4</street>
+            <postal_code>45239</postal_code>
+            <city>Essen</city>
+            <country>DE</country>
+        </address>
+        <contact_person>
+            <name>Jane Doe</name>
+            <email>jane.doe@example.org</email>
+            <phone>+49 1234 567-890</phone>
+        </contact_person>
+        <eudr_details>
+            <eudr_role>SME-Operator</eudr_role>
+            <eudr_dds_responsibility>supplier</eudr_dds_responsibility>
+            <eudr_document_type>DownstreamReference</eudr_document_type>
+        </eudr_details>
+    </operator>
+    <order_item>
+        <order_reference>123456</order_reference>
+        <item_reference>1</item_reference>
+        <production_reference>ABC_123456_1</production_reference>
+    </order_item>
+    <referenced_eudr_statements>
+        <statement>
+            <reference_number>24FRXVV3VOS885</reference_number>
+            <verification_number>Pr0p8555Q-q5573B321</verification_number>
+        </statement>
+        <statement>
+            <reference_number>24FRYHH3VOS886</reference_number>
+            <verification_number>Pr0p8555Q-z4583B322</verification_number>
+        </statement>
+        <statement>
+            <reference_number>24FRZJJ3VOS887</reference_number>
+            <verification_number>Pr0p8555Q-q9593B323</verification_number>
+        </statement>
+    </referenced_eudr_statements>
+    <document_meta>
+        <identifier>12345abc-67de-89f0-ghi1-j23456k7890m</identifier>
+        <submission_date>2025-07-03T11:15:00.000Z</submission_date>
+    </document_meta>
+</eudr>
