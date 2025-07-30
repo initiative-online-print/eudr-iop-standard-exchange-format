@@ -1,10 +1,11 @@
 # EUDR IOP Standard Exchange Format (EUDR-X)
 
-EUDR-X is a **standardized format** established by the *Initiative Online Print e.V. (IOP)* for the structured exchange
-of data related to the **EU Deforestation Regulation (EUDR)**.
+EUDR-X is a **standardized format** developed by the ESG working group of the *Initiative Online Print e.V. (IOP)*
+for the structured exchange of data related to the *EU Deforestation Regulation (EUDR)*.
 
-The [specification](./SPECIFICATION.md) is designed to support **data exchange within the full supply chain**,
-enabling companies to report Due Diligence Statements (DDS) in a standardized and machine-readable way.
+The [specification](./SPECIFICATION.md) was developed to support the exchange of data throughout the supply chain
+and to enable companies to report Due Diligence Statement (DDS) reference numbers (DDR) and verification numbers (DDV)
+in a standardized and machine-readable way.
 
 ## Formats
 
