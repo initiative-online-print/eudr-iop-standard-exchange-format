@@ -47,19 +47,23 @@
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
-            <xs:element name="eudr_dds_responsibility">
+            <xs:element name="taric_document_code">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
-                        <xs:enumeration value="own"/>
-                        <xs:enumeration value="supplier"/>
+                        <xs:enumeration value="C716"/>
+                        <xs:enumeration value="C717"/>
+                        <xs:enumeration value="Y129"/>
+                        <xs:enumeration value="Y132"/>
+                        <xs:enumeration value="Y133"/>
+                        <xs:enumeration value="Y142"/>
+                        <xs:enumeration value="Y144"/>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
-            <xs:element name="eudr_document_type">
+            <xs:element name="hs_code">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
-                        <xs:enumeration value="DownstreamReference"/>
-                        <xs:enumeration value="FirstPlacerReference"/>
+                        <xs:pattern value="(\d{2}|\d{4}|\d{6})"/>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
@@ -78,7 +82,7 @@
     <!-- Referenced EUDR Statements -->
     <xs:complexType name="ReferencedEudrStatementsType">
         <xs:sequence>
-            <xs:element name="statement" type="StatementType" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="statement" type="StatementType" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
     <xs:complexType name="StatementType">

@@ -16,8 +16,8 @@
         </contact_person>
         <eudr_details>
             <eudr_role>SME-Operator</eudr_role>
-            <eudr_dds_responsibility>supplier</eudr_dds_responsibility>
-            <eudr_document_type>DownstreamReference</eudr_document_type>
+            <taric_document_code>C717</taric_document_code>
+            <hs_code>4901</hs_code>
         </eudr_details>
     </operator>
     <order_item>

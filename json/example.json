@@ -15,8 +15,8 @@
         },
         "eudr_details": {
             "eudr_role": "SME-Operator",
-            "eudr_dds_responsibility": "supplier",
-            "eudr_document_type": "DownstreamReference"
+            "taric_document_code": "C717",
+            "hs_code": "4901"
         }
     },
     "order_item": {
