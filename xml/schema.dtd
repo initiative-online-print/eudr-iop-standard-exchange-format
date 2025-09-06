@@ -29,6 +29,7 @@
 <!ELEMENT verification_number (#PCDATA)>
 <!ELEMENT serial_shipping_container_reference (#PCDATA)>
 
-<!ELEMENT document_meta (identifier?, submission_date)>
+<!ELEMENT document_meta (identifier?, submission_date, version)>
 <!ELEMENT identifier (#PCDATA)>
 <!ELEMENT submission_date (#PCDATA)>
+<!ELEMENT version (#PCDATA)>

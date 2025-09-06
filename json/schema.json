@@ -144,10 +144,15 @@
                 "submission_date": {
                     "type": "string",
                     "format": "date-time"
+                },
+                "version": {
+                    "type": "string",
+                    "pattern": "^([1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)$"
                 }
             },
             "required": [
-                "submission_date"
+                "submission_date",
+                "version"
             ]
         }
     },

@@ -44,5 +44,6 @@
     <document_meta>
         <identifier>12345abc-67de-89f0-ghi1-j23456k7890m</identifier>
         <submission_date>2025-07-03T11:15:00.000Z</submission_date>
+        <version>2.0.0</version>
     </document_meta>
 </eudr>

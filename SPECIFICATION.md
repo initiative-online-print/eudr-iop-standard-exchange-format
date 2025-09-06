@@ -1,4 +1,4 @@
-# EUDR IOP Standard Exchange Format (EUDR-X), Version 1.0.0
+# EUDR IOP Standard Exchange Format (EUDR-X), Version 2.0.0
 
 The JSON object represents a single data record containing metadata, operator details, information on the related order
 item, and Due Diligence Statements (DDS) with their reference and verification numbers.
@@ -82,3 +82,4 @@ Contains submission metadata.
 
 - `identifier` (string, optional): unique document identifier (e.g., UUID) within all documents created by the operator
 - `submission_date` (string, required): the date of submission in ISO 8601 format – `yyyy-MM-ddTHH:mm:ss.sssZ`
+- `version` (string, required): the version of the EUDR-X standard the document complies to
