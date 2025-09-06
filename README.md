@@ -37,6 +37,11 @@ The use of the CSV is **strongly discouraged** as CSV cannot represent nested st
 
 Example: [example.csv](./csv/example.csv)
 
+## File naming convention
+The EUDR-X specification intentionally does not include any requirements regarding the manner in which EUDR-X documents are exchanged (API, file system, etc.).
+However, if an EUDR-X document is saved as a file, it should be named according to the convention:
+`<submission date in format YYYY-MM-dd-HH-mm-ss>_<order_reference>_<item_reference>_eudr-x.(json|xml)`.
+
 ## Reference implementations
 
 In the future, implementations of the EUDR-X specification will be listed here.
