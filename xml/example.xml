@@ -29,10 +29,12 @@
         <statement>
             <reference_number>24FRXVV3VOS885</reference_number>
             <verification_number>Pr0p8555Q-q5573B321</verification_number>
+            <serial_shipping_container_reference>123456789012345678</serial_shipping_container_reference>
         </statement>
         <statement>
             <reference_number>24FRYHH3VOS886</reference_number>
             <verification_number>Pr0p8555Q-z4583B322</verification_number>
+            <serial_shipping_container_reference>123456789012345679</serial_shipping_container_reference>
         </statement>
         <statement>
             <reference_number>24FRZJJ3VOS887</reference_number>

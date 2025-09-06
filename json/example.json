@@ -27,11 +27,13 @@
     "referenced_eudr_statements": [
         {
             "reference_number": "24FRXVV3VOS885",
-            "verification_number": "Pr0p8555Q-q5573B321"
+            "verification_number": "Pr0p8555Q-q5573B321",
+            "serial_shipping_container_reference": "123456789012345678"
         },
         {
             "reference_number": "24FRYHH3VOS886",
-            "verification_number": "Pr0p8555Q-z4583B322"
+            "verification_number": "Pr0p8555Q-z4583B322",
+            "serial_shipping_container_reference": "123456789012345679"
         },
         {
             "reference_number": "24FRZJJ3VOS887",

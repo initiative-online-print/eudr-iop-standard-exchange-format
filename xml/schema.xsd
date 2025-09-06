@@ -89,6 +89,7 @@
         <xs:sequence>
             <xs:element name="reference_number" type="xs:string"/>
             <xs:element name="verification_number" type="xs:string"/>
+            <xs:element name="serial_shipping_container_reference" type="xs:string" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
 

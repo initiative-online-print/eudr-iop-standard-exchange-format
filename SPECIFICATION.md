@@ -68,6 +68,9 @@ references Due Diligence Statements (DDS).
 Each entry contains:
 - `reference_number` (string, required): Due Diligence Reference Number (DDR)
 - `verification_number` (string, required): the corresponding Due Diligence Verification Number (DDV)
+- `serial_shipping_container_reference` (string, optional): a unique identifier for a shipping container,
+   such as a [Serial Shipping Container Code (SSCC)](https://www.gs1.org/standards/id-keys/sscc) or a tracking code
+   which allows the receiver of goods to associate the DDS with certain shipments.
 
 If `taric_document_code` is `"C716"`, exactly one entry for the own DDS is mandatory.
 If `taric_document_code` is `"C717"`, at least one entry is mandatory.

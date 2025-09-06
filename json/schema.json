@@ -124,6 +124,9 @@
                     },
                     "verification_number": {
                         "type": "string"
+                    },
+                    "serial_shipping_container_reference": {
+                        "type": "string"
                     }
                 },
                 "required": [
