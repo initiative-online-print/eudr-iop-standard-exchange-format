@@ -1,4 +1,4 @@
-# EUDR IOP Standard Exchange Format (EUDR-X), Version 1.0.0
+# EUDR IOP Standard Exchange Format (EUDR-X), Version 2.0.0
 
 The JSON object represents a single data record containing metadata, operator details, information on the related order
 item, and Due Diligence Statements (DDS) with their reference and verification numbers.
@@ -34,20 +34,22 @@ Contains information about the reporting company.
         - `"SME-Trader"`
         - `"LC-Operator"`
         - `"LC-Trader"`
-    - `eudr_dds_responsibility` (required) defines who is responsible for the **Due Diligence Statement (DDS)** in the
-      context of this transaction.
+    - `taric_document_code` (required) as defined by the [European Commission](https://www.clecat.org/media/deforestation-reg-2023-1115---taric-data.pdf)
 
       Allowed values:
-        - `"own"` indicates that **the operator itself has created the DDS**. The data submitted is original and based
-          on the operator’s internal risk assessment and traceability.
-        - `"supplier"` means the DDS referenced are created **by other operators in the supply chain**. The current
-          operator references an existing DDS provided by its supplier.
-    - `eudr_document_type` (required) defines the document type.
+        - `"C716"` to declare that DDS is available.
+        - `"C717"` to declare that they do not have to fulfill due diligence and forward the data of the upstream supplier (only for SME operators).
+        - `"Y129"` to declare that the product is not subject to EUDR although belonging to HS code in scope
+          ("ex" products in [Annex I](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R1115&qid=1687867231461#d1e32-243-1) of the EUDR).
+        - `"Y132"` to declare that in scope products have been produced before 30 December 2025.
+        - `"Y133"` to declare that product is produced entirely from 100 % recycled material.
+        - `"Y142"` to declare that it is a non-commercial activity.
+        - `"Y144"` to declare that company is micro/small company subject to the transitional period until 30 June 2026.
+    - `hs_code` (optional) to classify the type of goods according to the Harmonized System (HS) regulated by the World Customs Organization (WCO).
 
-      Allowed values:
-        - `"DownstreamReference"` indicates that the operator is not responsible for the initial declaration of a DDS,
-          but provides reference number(s) of suppliers/traders.
-        - `"FirstPlacerReference"` specifies that the document is the initial declaration of a DDS by the operator.
+      Values: 2, 4 or 6 digits as defined in the [nomenclature](https://ec.europa.eu/taxation_customs/dds2/taric/taric_consultation.jsp?Lang=en&Expand=true#afterForm).
+
+      Example: [4901 for books](https://ec.europa.eu/taxation_customs/dds2/taric/taric_consultation.jsp?Lang=en&Taric=4901&Expand=true)
 
 ## `order_item`
 
@@ -60,12 +62,18 @@ identifies an unique order item.
 
 ## `referenced_eudr_statements`
 
-Contains at least one item. Each entry contains:
+references Due Diligence Statements (DDS).
 
+Each entry contains:
 - `reference_number` (string, required): Due Diligence Reference Number (DDR)
 - `verification_number` (string, required): the corresponding Due Diligence Verification Number (DDV)
+- `serial_shipping_container_reference` (string, optional): a unique identifier for a shipping container,
+   such as a [Serial Shipping Container Code (SSCC)](https://www.gs1.org/standards/id-keys/sscc) or a tracking code
+   which allows the receiver of goods to associate the DDS with certain shipments.
 
-Minimum one entry required. If `eudr_dds_responsibility` is `"own"`, exactly one entry is mandatory.
+If `taric_document_code` is `"C716"`, exactly one entry for the own DDS is mandatory.
+If `taric_document_code` is `"C717"`, at least one entry is mandatory.
+In combination with other TARIC document codes, there may be no entries at all.
 
 ## `document_meta`
 
@@ -73,3 +81,4 @@ Contains submission metadata.
 
 - `identifier` (string, optional): unique document identifier (e.g., UUID) within all documents created by the operator
 - `submission_date` (string, required): the date of submission in ISO 8601 format – `yyyy-MM-ddTHH:mm:ss.sssZ`
+- `version` (string, required): the version of the EUDR-X standard the document complies to

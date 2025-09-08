@@ -15,8 +15,8 @@
         },
         "eudr_details": {
             "eudr_role": "SME-Operator",
-            "eudr_dds_responsibility": "supplier",
-            "eudr_document_type": "DownstreamReference"
+            "taric_document_code": "C717",
+            "hs_code": "4901"
         }
     },
     "order_item": {
@@ -27,11 +27,13 @@
     "referenced_eudr_statements": [
         {
             "reference_number": "24FRXVV3VOS885",
-            "verification_number": "Pr0p8555Q-q5573B321"
+            "verification_number": "Pr0p8555Q-q5573B321",
+            "serial_shipping_container_reference": "123456789012345678"
         },
         {
             "reference_number": "24FRYHH3VOS886",
-            "verification_number": "Pr0p8555Q-z4583B322"
+            "verification_number": "Pr0p8555Q-z4583B322",
+            "serial_shipping_container_reference": "123456789012345679"
         },
         {
             "reference_number": "24FRZJJ3VOS887",
@@ -40,6 +42,7 @@
     ],
     "document_meta": {
         "identifier": "12345abc-67de-89f0-ghi1-j23456k7890m",
-        "submission_date": "2025-07-03T11:15:00.000Z"
+        "submission_date": "2025-07-03T11:15:00.000Z",
+        "version": "2.0.0"
     }
 }

@@ -16,8 +16,8 @@
         </contact_person>
         <eudr_details>
             <eudr_role>SME-Operator</eudr_role>
-            <eudr_dds_responsibility>supplier</eudr_dds_responsibility>
-            <eudr_document_type>DownstreamReference</eudr_document_type>
+            <taric_document_code>C717</taric_document_code>
+            <hs_code>4901</hs_code>
         </eudr_details>
     </operator>
     <order_item>
@@ -29,10 +29,12 @@
         <statement>
             <reference_number>24FRXVV3VOS885</reference_number>
             <verification_number>Pr0p8555Q-q5573B321</verification_number>
+            <serial_shipping_container_reference>123456789012345678</serial_shipping_container_reference>
         </statement>
         <statement>
             <reference_number>24FRYHH3VOS886</reference_number>
             <verification_number>Pr0p8555Q-z4583B322</verification_number>
+            <serial_shipping_container_reference>123456789012345679</serial_shipping_container_reference>
         </statement>
         <statement>
             <reference_number>24FRZJJ3VOS887</reference_number>
@@ -42,5 +44,6 @@
     <document_meta>
         <identifier>12345abc-67de-89f0-ghi1-j23456k7890m</identifier>
         <submission_date>2025-07-03T11:15:00.000Z</submission_date>
+        <version>2.0.0</version>
     </document_meta>
 </eudr>

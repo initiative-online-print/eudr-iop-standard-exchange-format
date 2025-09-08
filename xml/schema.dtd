@@ -13,21 +13,23 @@
 <!ELEMENT name (#PCDATA)>
 <!ELEMENT email (#PCDATA)>
 <!ELEMENT phone (#PCDATA)>
-<!ELEMENT eudr_details (eudr_role, eudr_dds_responsibility, eudr_document_type)>
+<!ELEMENT eudr_details (eudr_role, taric_document_code, hs_code?)>
 <!ELEMENT eudr_role (#PCDATA)>
-<!ELEMENT eudr_dds_responsibility (#PCDATA)>
-<!ELEMENT eudr_document_type (#PCDATA)>
+<!ELEMENT taric_document_code (#PCDATA)>
+<!ELEMENT hs_code (#PCDATA)>
 
 <!ELEMENT order_item (order_reference, item_reference, production_reference?)>
 <!ELEMENT order_reference (#PCDATA)>
 <!ELEMENT item_reference (#PCDATA)>
 <!ELEMENT production_reference (#PCDATA)>
 
-<!ELEMENT referenced_eudr_statements (statement+)>
-<!ELEMENT statement (reference_number, verification_number)>
+<!ELEMENT referenced_eudr_statements (statement*)>
+<!ELEMENT statement (reference_number, verification_number, serial_shipping_container_reference?)>
 <!ELEMENT reference_number (#PCDATA)>
 <!ELEMENT verification_number (#PCDATA)>
+<!ELEMENT serial_shipping_container_reference (#PCDATA)>
 
-<!ELEMENT document_meta (identifier?, submission_date)>
+<!ELEMENT document_meta (identifier?, submission_date, version)>
 <!ELEMENT identifier (#PCDATA)>
 <!ELEMENT submission_date (#PCDATA)>
+<!ELEMENT version (#PCDATA)>

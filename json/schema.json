@@ -66,25 +66,26 @@
                                 "LC-Trader"
                             ]
                         },
-                        "eudr_dds_responsibility": {
+                        "taric_document_code": {
                             "type": "string",
                             "enum": [
-                                "own",
-                                "supplier"
+                                "C716",
+                                "C717",
+                                "Y129",
+                                "Y132",
+                                "Y133",
+                                "Y142",
+                                "Y144"
                             ]
                         },
-                        "eudr_document_type": {
+                        "hs_code": {
                             "type": "string",
-                            "enum": [
-                                "DownstreamReference",
-                                "FirstPlacerReference"
-                            ]
+                            "pattern": "^(\\d{2}|\\d{4}|\\d{6})$"
                         }
                     },
                     "required": [
                         "eudr_role",
-                        "eudr_dds_responsibility",
-                        "eudr_document_type"
+                        "taric_document_code"
                     ]
                 }
             },
@@ -123,14 +124,16 @@
                     },
                     "verification_number": {
                         "type": "string"
+                    },
+                    "serial_shipping_container_reference": {
+                        "type": "string"
                     }
                 },
                 "required": [
                     "reference_number",
                     "verification_number"
                 ]
-            },
-            "minItems": 1
+            }
         },
         "document_meta": {
             "type": "object",
@@ -141,10 +144,15 @@
                 "submission_date": {
                     "type": "string",
                     "format": "date-time"
+                },
+                "version": {
+                    "type": "string",
+                    "pattern": "^([1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)$"
                 }
             },
             "required": [
-                "submission_date"
+                "submission_date",
+                "version"
             ]
         }
     },
