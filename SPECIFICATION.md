@@ -1,4 +1,4 @@
-# EUDR IOP Standard Exchange Format (EUDR-X), Version 2.0.0
+# EUDR IOP Standard Exchange Format (EUDR-X), Version 2.0.1
 
 The JSON object represents a single data record containing metadata, operator details, information on the related order
 item, and Due Diligence Statements (DDS) with their reference and verification numbers.
@@ -38,13 +38,13 @@ Contains information about the reporting company.
 
       Allowed values:
         - `"C716"` to declare that DDS is available.
-        - `"C717"` to declare that they do not have to fulfill due diligence and forward the data of the upstream supplier (only for SME operators).
+        - `"C717"` to declare that the operator does not have to fulfill due diligence and forwards the data of the upstream supplier (only for SME operators).
         - `"Y129"` to declare that the product is not subject to EUDR although belonging to HS code in scope
           ("ex" products in [Annex I](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R1115&qid=1687867231461#d1e32-243-1) of the EUDR).
         - `"Y132"` to declare that in scope products have been produced before 30 December 2025.
-        - `"Y133"` to declare that product is produced entirely from 100 % recycled material.
+        - `"Y133"` to declare that the product has been produced entirely from 100 % recycled material.
+        - `"Y141"` to declare that the operator is a micro/small company subject to the transitional period until 30 June 2026.
         - `"Y142"` to declare that it is a non-commercial activity.
-        - `"Y144"` to declare that company is micro/small company subject to the transitional period until 30 June 2026.
     - `hs_code` (optional) to classify the type of goods according to the Harmonized System (HS) regulated by the World Customs Organization (WCO).
 
       Values: 2, 4 or 6 digits as defined in the [nomenclature](https://ec.europa.eu/taxation_customs/dds2/taric/taric_consultation.jsp?Lang=en&Expand=true#afterForm).
