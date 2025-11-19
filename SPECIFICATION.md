@@ -75,6 +75,14 @@ If `taric_document_code` is `"C716"`, exactly one entry for the own DDS is manda
 If `taric_document_code` is `"C717"`, at least one entry is mandatory.
 In combination with other TARIC document codes, there may be no entries at all.
 
+The [conventional DDS reference number](https://www.clecat.org/media/information-on-the-conventional-reference-number.pdf) 
+for exports and reimports of relevant products initially placed in the Union market during the transitional period may be submitted as:
+
+```
+  "reference_number": "99EU9999999999",
+  "verification_number": "--------",
+```
+
 ## `document_meta`
 
 Contains submission metadata.
