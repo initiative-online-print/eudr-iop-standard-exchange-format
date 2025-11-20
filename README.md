@@ -33,7 +33,9 @@ Example: [example.xml](./xml/example.xml)
 
 ### CSV (not recommended)
 
-The use of the CSV is **strongly discouraged** as CSV cannot represent nested structures (objects, arrays).
+The use of the CSV is **discouraged** as CSV cannot represent nested structures (objects, arrays).
+**It should only be used if required by legacy systems because neither JSON nor XML can be used.**
+The separator must be a semicolon (`;`).
 
 Example: [example.csv](./csv/example.csv)
 
