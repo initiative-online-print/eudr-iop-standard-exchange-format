@@ -1,4 +1,4 @@
-# EUDR IOP Standard Exchange Format (EUDR-X), Version 2.0.1
+# EUDR IOP Standard Exchange Format (EUDR-X)
 
 The JSON object represents a single data record containing metadata, operator details, information on the related order
 item, and Due Diligence Statements (DDS) with their reference and verification numbers.
@@ -41,7 +41,7 @@ Contains information about the reporting company.
         - `"C717"` to declare that the operator does not have to fulfill due diligence and forwards the data of the upstream supplier (only for SME operators).
         - `"Y129"` to declare that the product is not subject to EUDR although belonging to HS code in scope
           ("ex" products in [Annex I](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R1115&qid=1687867231461#d1e32-243-1) of the EUDR).
-        - `"Y132"` to declare that in scope products have been produced before 30 December 2025.
+        - `"Y132"` to declare that in scope products have been produced before 29 June 2023.
         - `"Y133"` to declare that the product has been produced entirely from 100 % recycled material.
         - `"Y141"` to declare that the operator is a micro/small company subject to the transitional period until 30 June 2026.
         - `"Y142"` to declare that it is a non-commercial activity.
@@ -75,8 +75,8 @@ If `taric_document_code` is `"C716"`, exactly one entry for the own DDS is manda
 If `taric_document_code` is `"C717"`, at least one entry is mandatory.
 In combination with other TARIC document codes, there may be no entries at all.
 
-The [conventional DDS reference number](https://www.clecat.org/media/information-on-the-conventional-reference-number.pdf) 
-for exports and reimports of relevant products initially placed in the Union market during the transitional period may be submitted as:
+The [conventional DDS reference number](https://www.clecat.org/media/information-on-the-conventional-reference-number.pdf) for exports and reimports of relevant products 
+initially placed in the Union market during the transitional period (between 29 June 2023 and 30 December 2025) may be submitted as:
 
 ```
   "reference_number": "99EU9999999999",
